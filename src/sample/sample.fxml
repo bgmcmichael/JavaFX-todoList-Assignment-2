@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="655.0" xmlns="http://javafx.com/javafx/8.0.91" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <TextField fx:id="todoText" onAction="#addItem" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+      <HBox id="ToDoList" alignment="CENTER" prefHeight="0.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Button minWidth="-Infinity" mnemonicParsing="false" onAction="#addItem" text="Add" />
+            <Button minWidth="-Infinity" mnemonicParsing="false" onAction="#removeItem" text="Remove" />
+            <Button minWidth="-Infinity" mnemonicParsing="false" onAction="#toggleItem" text="Toggle" />
+            <Button minWidth="-Infinity" mnemonicParsing="false" onAction="#markAllItemsNotDone" text="Mark Not Done" />
+            <Button minWidth="-Infinity" mnemonicParsing="false" onAction="#markAllItemsDone" text="Mark Done" />
+            <Button minWidth="-Infinity" mnemonicParsing="false" onAction="#toggleAllItems" text="Toggle All" />
+         </children>
+      </HBox>
+      <ListView fx:id="todoList" prefHeight="601.0" prefWidth="887.0" VBox.vgrow="ALWAYS" />
+   </children>
+</VBox>
